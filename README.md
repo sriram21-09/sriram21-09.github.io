@@ -10,7 +10,7 @@ Building defense systems that think — specializing in detection engineering,<b
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/sriram-kasukurthi-600027275)
 &nbsp;&nbsp;
-[![Portfolio](https://img.shields.io/badge/Portfolio-111111?style=flat-square&logo=googlechrome&logoColor=white)]([https://sriram21-09.github.io](https://sriram21-09.github.io/sriram21-09/))
+[![Portfolio](https://img.shields.io/badge/Portfolio-111111?style=flat-square&logo=googlechrome&logoColor=white)](https://sriram21-09.github.io/sriram21-09/)
 &nbsp;&nbsp;
 [![TryHackMe](https://img.shields.io/badge/TryHackMe-212C42?style=flat-square&logo=tryhackme&logoColor=white)](https://tryhackme.com/p/sriram.2109)
 &nbsp;&nbsp;
@@ -159,6 +159,6 @@ A multi-layered honeypot deception framework that deploys intelligent traps acro
 
 *Building systems where security is the architecture, not the afterthought.*
 
-**[Portfolio](https://sriram21-09.github.io)** · **[LinkedIn](https://linkedin.com/in/sriram-kasukurthi-600027275)** · **[sriramkasukurthi2109@gmail.com](mailto:sriramkasukurthi2109@gmail.com)**
+**[Portfolio](https://sriram21-09.github.io/sriram21-09/)** · **[LinkedIn](https://linkedin.com/in/sriram-kasukurthi-600027275)** · **[sriramkasukurthi2109@gmail.com](mailto:sriramkasukurthi2109@gmail.com)**
 
 </div>
