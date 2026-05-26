@@ -4,7 +4,7 @@
 
 **Cybersecurity-Focused Software Engineer**
 
-Building defense systems that think — specializing in detection engineering,<br>deception technologies, and AI-driven threat intelligence.
+Building defense systems that think  specializing in detection engineering,<br>deception technologies, and AI-driven threat intelligence.
 
 <br>
 
