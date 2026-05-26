@@ -39,21 +39,48 @@
   <canvas id="heroCanvas"></canvas>
   <div class="hero-glow hero-glow-1"></div>
   <div class="hero-glow hero-glow-2"></div>
+  <div class="hero-glow hero-glow-3"></div>
 </div>
-<div class="container hero-content">
-  <div class="hero-badge"><span class="pulse"></span> Available for opportunities</div>
-  <h1 class="hero-title">Hi, I'm <span class="gradient-text">Kasukurthi Sriram</span></h1>
-  <div class="hero-subtitle"><span id="typingText"></span><span class="cursor"></span></div>
-  <p class="hero-description">Building intelligent defense systems that turn hostile interaction into actionable intelligence. Specializing in detection engineering, deception technologies, and AI-driven threat intelligence platforms.</p>
-  <div class="hero-cta">
-    <a href="#projects" class="btn btn-primary">⚡ View Projects</a>
-    <a href="#contact" class="btn btn-outline">💬 Get In Touch</a>
+<div class="container hero-grid">
+  <div class="hero-content">
+    <div class="hero-badge"><span class="pulse"></span> Available for opportunities</div>
+    <h1 class="hero-title">Hi, I'm <span class="gradient-text">Kasukurthi Sriram</span></h1>
+    <div class="hero-subtitle"><span id="typingText"></span><span class="cursor"></span></div>
+    <p class="hero-description">Building intelligent defense systems that turn hostile interaction into actionable intelligence. Specializing in detection engineering, deception technologies, and AI-driven threat intelligence platforms.</p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn btn-primary">⚡ View Projects</a>
+      <a href="#contact" class="btn btn-outline">💬 Get In Touch</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="hero-stat-value" data-count="11" data-suffix="+">0</div><div class="hero-stat-label">Repositories</div></div>
+      <div><div class="hero-stat-value" data-count="347" data-suffix="+">0</div><div class="hero-stat-label">Source Files</div></div>
+      <div><div class="hero-stat-value" data-count="125" data-suffix="+">0</div><div class="hero-stat-label">Docs Written</div></div>
+      <div><div class="hero-stat-value" data-count="4">0</div><div class="hero-stat-label">Internships</div></div>
+    </div>
   </div>
-  <div class="hero-stats">
-    <div><div class="hero-stat-value" data-count="11" data-suffix="+">0</div><div class="hero-stat-label">Repositories</div></div>
-    <div><div class="hero-stat-value" data-count="347" data-suffix="+">0</div><div class="hero-stat-label">Source Files</div></div>
-    <div><div class="hero-stat-value" data-count="125" data-suffix="+">0</div><div class="hero-stat-label">Docs Written</div></div>
-    <div><div class="hero-stat-value" data-count="4">0</div><div class="hero-stat-label">Internships</div></div>
+  <div class="hero-terminal" aria-hidden="true">
+    <div class="terminal-header">
+      <div class="terminal-dots"><span></span><span></span><span></span></div>
+      <div class="terminal-title">phantomnet — threat_monitor.py</div>
+    </div>
+    <div class="terminal-body" id="terminalBody">
+      <div class="terminal-line"><span class="t-gray">#!/usr/bin/env python3</span></div>
+      <div class="terminal-line"><span class="t-purple">from</span> <span class="t-cyan">phantomnet.core</span> <span class="t-purple">import</span> ThreatEngine</div>
+      <div class="terminal-line"><span class="t-purple">from</span> <span class="t-cyan">phantomnet.ml</span> <span class="t-purple">import</span> EnsembleScorer</div>
+      <div class="terminal-line"></div>
+      <div class="terminal-line"><span class="t-cyan">engine</span> = ThreatEngine(<span class="t-green">protocols</span>=<span class="t-yellow">[</span><span class="t-green">"ssh"</span>, <span class="t-green">"http"</span>, <span class="t-green">"ftp"</span>, <span class="t-green">"smtp"</span><span class="t-yellow">]</span>)</div>
+      <div class="terminal-line"><span class="t-cyan">scorer</span> = EnsembleScorer(<span class="t-green">explainer</span>=<span class="t-green">"shap"</span>)</div>
+      <div class="terminal-line"></div>
+      <div class="terminal-line"><span class="t-gray"># Real-time threat analysis pipeline</span></div>
+      <div class="terminal-line"><span class="t-purple">async for</span> <span class="t-cyan">event</span> <span class="t-purple">in</span> engine.stream():</div>
+      <div class="terminal-line">    <span class="t-cyan">score</span> = <span class="t-purple">await</span> scorer.analyze(event)</div>
+      <div class="terminal-line">    <span class="t-purple">if</span> score.threat_level > <span class="t-yellow">0.85</span>:</div>
+      <div class="terminal-line">        engine.respond(score.playbook)</div>
+      <div class="terminal-line"></div>
+      <div class="terminal-line t-log"><span class="t-green">▶</span> <span class="t-gray">[INFO]</span> Engine initialized — 4 honeypots active</div>
+      <div class="terminal-line t-log"><span class="t-green">▶</span> <span class="t-gray">[INFO]</span> ML ensemble loaded — 16ms latency</div>
+      <div class="terminal-line t-log" id="terminalLive"></div>
+    </div>
   </div>
 </div>
 </section>

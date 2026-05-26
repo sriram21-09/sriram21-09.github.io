@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollReveal();
   initCanvas();
   initCounters();
+  initTerminal();
 });
 
 /* ─── Navigation ─── */
@@ -223,5 +224,43 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     if (target) {
       target.scrollIntoView({ behavior: 'smooth' });
     }
+  });
+});
+
+/* ─── Terminal Live Log ─── */
+function initTerminal() {
+  const el = document.getElementById('terminalLive');
+  if (!el) return;
+
+  const logs = [
+    '<span class="t-yellow">⚠</span> <span class="t-gray">[ALERT]</span> SSH brute-force — <span class="t-cyan">192.168.1.47</span> → score: <span class="t-yellow">0.92</span>',
+    '<span class="t-green">▶</span> <span class="t-gray">[RESP]</span> Playbook executed — IP blocked, PCAP saved',
+    '<span class="t-green">▶</span> <span class="t-gray">[INFO]</span> Processing <span class="t-cyan">14,681</span> events/sec',
+    '<span class="t-yellow">⚠</span> <span class="t-gray">[ALERT]</span> HTTP scan detected — <span class="t-cyan">10.0.0.83</span> → score: <span class="t-yellow">0.88</span>',
+    '<span class="t-green">▶</span> <span class="t-gray">[SHAP]</span> Top feature: <span class="t-cyan">port_scan_rate</span> = 0.41',
+    '<span class="t-green">▶</span> <span class="t-gray">[INFO]</span> STIX 2.1 bundle exported — 23 indicators',
+    '<span class="t-yellow">⚠</span> <span class="t-gray">[ALERT]</span> FTP honeypot triggered — <span class="t-cyan">172.16.0.12</span>',
+    '<span class="t-green">▶</span> <span class="t-gray">[ML]</span> Ensemble latency: <span class="t-cyan">16ms</span> avg',
+  ];
+
+  let i = 0;
+  function nextLog() {
+    el.innerHTML = logs[i % logs.length];
+    el.style.opacity = '0';
+    requestAnimationFrame(() => { el.style.transition = 'opacity 0.4s'; el.style.opacity = '1'; });
+    i++;
+    setTimeout(nextLog, 2800);
+  }
+  setTimeout(nextLog, 4000);
+}
+
+/* ─── GitHub Image Fallback ─── */
+document.querySelectorAll('.github-card img').forEach(img => {
+  img.addEventListener('error', function () {
+    this.style.display = 'none';
+    const fallback = document.createElement('div');
+    fallback.style.cssText = 'padding:40px;text-align:center;color:#52525b;font-size:0.9rem;';
+    fallback.textContent = 'Stats loading...';
+    this.parentElement.appendChild(fallback);
   });
 });
